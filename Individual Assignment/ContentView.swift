@@ -9,8 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        
-        
+    
         
         ZStack {
             
@@ -40,6 +39,7 @@ struct ContentView: View {
                             .padding(.bottom)
                             .padding(.bottom)
                             .padding(.bottom)
+                            .padding(.leading)
                             
                         }
                         
@@ -51,7 +51,7 @@ struct ContentView: View {
                             .padding(.bottom)
                             .padding(.bottom)
                         
-                        Spacer(minLength: 165)
+                        Spacer(minLength: 175)
                         
                     }
                     
@@ -62,53 +62,39 @@ struct ContentView: View {
                     
                 Spacer()
                 
-                
+                //
                 VStack {
-                    Image("cprimage")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 360)
-                    
-                    ZStack {
+                    VStack {
+                        Image("cprimage")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 360)
                         
-                        Color.white
-                            .frame(width: 360, height: 50)
+                        ZStack {
                             
+                            Color.white
+                                .frame(width: 360, height: 50)
+                                
+                            
+                            Text("Take a First Aid Course")
+                                .bold()
+                                .padding(.horizontal)
+                                .font(Font.system(size: 22))
+                            .multilineTextAlignment(.leading)
+                        }
                         
-                        Text("Take a First Aid Course")
-                            .bold()
-                            .padding(.horizontal)
-                            .font(Font.system(size: 22))
-                        .multilineTextAlignment(.leading)
                     }
-                    
-                }
-                .clipShape(RoundedRectangle(cornerRadius: 10))
-                
-                HStack {
-                    Circle()
-                        .frame(width: 10)
-                    .foregroundColor(.gray)
-                    
-                    Circle()
-                        .frame(width: 10)
-                    .foregroundColor(.gray)
-                    
-                    Circle()
-                        .frame(width: 10)
-                    .foregroundColor(.gray)
-                    
-                    Circle()
-                        .frame(width: 10)
-                    .foregroundColor(.gray)
-                    
-                    Circle()
-                        .frame(width: 10)
-                    .foregroundColor(.black)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
                 }
                 
+               
+            
+                .padding(30)
+                //
                 
-                
+                Text("LEARN FIRST AID FOR...")
+                    .foregroundColor(.gray)
+                    .multilineTextAlignment(.leading)
                 
                 
                 //big v stack
