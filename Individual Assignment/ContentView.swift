@@ -36,10 +36,9 @@ struct ContentView: View {
                                 Spacer()
                                 
                             }
-                            .padding(.bottom)
-                            .padding(.bottom)
-                            .padding(.bottom)
-                            .padding(.leading)
+                            .padding(.bottom, 50)
+                            .padding(.leading, 20)
+                            
                             
                         }
                         
@@ -47,11 +46,10 @@ struct ContentView: View {
                             .foregroundColor(.white)
                             .font(Font.system(size: 25))
                             .bold()
-                            .padding(.bottom)
-                            .padding(.bottom)
-                            .padding(.bottom)
+                            .padding(.bottom, 50)
+                            
                         
-                        Spacer(minLength: 175)
+                        Spacer(minLength: 190)
                         
                     }
                     
@@ -85,11 +83,36 @@ struct ContentView: View {
                         
                     }
                     .clipShape(RoundedRectangle(cornerRadius: 10))
+                    
+                    
+                    HStack {
+                        Circle()
+                            .frame(width: 8)
+                        .foregroundColor(.gray)
+                        
+                        Circle()
+                            .frame(width: 8)
+                        .foregroundColor(.gray)
+                        
+                        Circle()
+                            .frame(width: 8)
+                        .foregroundColor(.gray)
+                        
+                        Circle()
+                            .frame(width: 8)
+                        .foregroundColor(.gray)
+                        
+                        Circle()
+                            .frame(width: 8)
+                        .foregroundColor(.black)
+                        
+                        
+                    }
                 }
                 
                
             
-                .padding(30)
+                .padding(40)
                 //
                 
                 Text("LEARN FIRST AID FOR...")
