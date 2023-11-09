@@ -68,17 +68,50 @@ struct ContentView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 360)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
                     
-                    Text("Take a First Aid Course")
-                        .bold()
-                        .padding(.horizontal)
-                        .font(Font.system(size: 22))
+                    ZStack {
+                        
+                        Color.white
+                            .frame(width: 360, height: 50)
+                            
+                        
+                        Text("Take a First Aid Course")
+                            .bold()
+                            .padding(.horizontal)
+                            .font(Font.system(size: 22))
                         .multilineTextAlignment(.leading)
+                    }
                     
                 }
+                .clipShape(RoundedRectangle(cornerRadius: 10))
                 
-                Spacer()
+                HStack {
+                    Circle()
+                        .frame(width: 10)
+                    .foregroundColor(.gray)
+                    
+                    Circle()
+                        .frame(width: 10)
+                    .foregroundColor(.gray)
+                    
+                    Circle()
+                        .frame(width: 10)
+                    .foregroundColor(.gray)
+                    
+                    Circle()
+                        .frame(width: 10)
+                    .foregroundColor(.gray)
+                    
+                    Circle()
+                        .frame(width: 10)
+                    .foregroundColor(.black)
+                }
+                
+                
+                
+                
+                
+                //big v stack
             }
         }
         
