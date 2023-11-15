@@ -49,7 +49,7 @@ struct ContentView: View {
                             .padding(.bottom, 50)
                             
                         
-                        Spacer(minLength: 190)
+                        Spacer(minLength: 170)
                         
                     }
                     
@@ -61,8 +61,8 @@ struct ContentView: View {
                 Spacer()
                 
                 //
-                VStack {
-                    VStack {
+                VStack(spacing: 0) {
+                    VStack(spacing: 0) {
                         Image("cprimage")
                             .resizable()
                             .scaledToFit()
@@ -71,18 +71,25 @@ struct ContentView: View {
                         ZStack {
                             
                             Color.white
-                                .frame(width: 360, height: 50)
+                                .frame(height: 50)
                                 
                             
-                            Text("Take a First Aid Course")
-                                .bold()
-                                .padding(.horizontal)
+                            HStack {
+                                Text("Take a First Aid Course")
+                                    .bold()
+                                   .padding(.leading, 20)
                                 .font(Font.system(size: 22))
-                            .multilineTextAlignment(.leading)
+                                
+                                Spacer()
+                            }
+                            
                         }
                         
                     }
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .cornerRadius(20)
+                    .padding()
+                 
+                    
                     
                     
                     HStack {
@@ -109,19 +116,33 @@ struct ContentView: View {
                         
                     }
                 }
+          
                 
                
-            
                 .padding(40)
+                
                 //
                 
-                Text("LEARN FIRST AID FOR...")
-                    .foregroundColor(.gray)
-                    .multilineTextAlignment(.leading)
+                HStack {
+                    
+                   Text("")
+                        .padding(30)
+                    
+                    Text("LEARN FIRST AID FOR...")
+                        .foregroundColor(.gray)
+                    
+                    Spacer()
+                }
+              
+                    
+                    
+                
+                
                 
                 
                 //big v stack
             }
+      
         }
         
     }
