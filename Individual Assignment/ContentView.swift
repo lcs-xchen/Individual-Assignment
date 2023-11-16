@@ -16,14 +16,14 @@ struct ContentView: View {
             Color.bggray
                 .ignoresSafeArea()
             
-            VStack {
+            VStack(spacing: 0) {
                 
                 // Top part with red background
                 ZStack {
                     Rectangle()
-                            .frame(width: 400, height: 130)
+                            .frame(height: 130)
                             .foregroundColor(.red)
-                        .ignoresSafeArea()
+                            .ignoresSafeArea()
                     
                    
                     HStack {
@@ -62,11 +62,10 @@ struct ContentView: View {
                 
                 //
                 VStack(spacing: 0) {
-                    VStack(spacing: -30) {
+                    VStack(spacing: 0) {
                         Image("cprimage")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 350, height: 200)
                             
                         
                         ZStack {
@@ -81,7 +80,6 @@ struct ContentView: View {
                                    .padding(.leading, 20)
                                 .font(Font.system(size: 22))
                                 
-                                Spacer()
                             }
                             
                         }
@@ -122,7 +120,7 @@ struct ContentView: View {
           
                 
                
-                .padding(40)
+                .padding(.horizontal, 40)
                 
                 //
                 
@@ -133,32 +131,27 @@ struct ContentView: View {
                     
                     Text("LEARN FIRST AID FOR...")
                         .foregroundColor(.gray)
-                        .padding(.leading, -170)
+                        .padding(.top)
+                        .padding(.leading, 50)
                        
                       
-                        
+                     Spacer()
                     
                     
                 }
               
-                VStack {
+                List {
+                    ListView(icon: Image(.nut), aid: "Allergies / anaphylaxis", rightCorner: Image(systemName: "chevron.right"))
                     
-                    Group {
-                        List {
-                            ListView(icon: Image(.nut), aid: "Allergies / anaphylaxis", rightCorner: Image(systemName: "chevron.right"))
-                            
-                            ListView(icon: Image(.blood), aid: "Applying a Tourniquet", rightCorner: Image(systemName: "chevron.right"))
-                            
-                            ListView(icon: Image(.asthma), aid: "Asthma attack", rightCorner: Image(systemName: "chevron.right"))
-                            
-                            ListView(icon: Image(.blood), aid: "Bleeding", rightCorner: Image(systemName: "chevron.right"))
-                            
-                            ListView(icon: Image(.bone), aid: "Broken bone", rightCorner: Image(systemName: "chevron.right"))
-                            
-                        }
-                    }
+                    ListView(icon: Image(.blood), aid: "Applying a Tourniquet", rightCorner: Image(systemName: "chevron.right"))
+                    
+                    ListView(icon: Image(.asthma), aid: "Asthma attack", rightCorner: Image(systemName: "chevron.right"))
+                    
+                    ListView(icon: Image(.blood), aid: "Bleeding", rightCorner: Image(systemName: "chevron.right"))
+                    
+                    ListView(icon: Image(.bone), aid: "Broken bone", rightCorner: Image(systemName: "chevron.right"))
+                    
                 }
-                    
                 
                 
                 
