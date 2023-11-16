@@ -9,7 +9,7 @@ import SwiftUI
 
 
 
-struct List: View {
+struct ListView: View {
     
     let icon: Image
     let aid: String
@@ -24,7 +24,7 @@ struct List: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width: 45)
-                .padding(.top, 4)
+                .padding(.leading, 12)
             
             Text(aid)
                 .font(Font.system(size: 20))
@@ -32,7 +32,6 @@ struct List: View {
             Spacer()
             rightCorner
                 .padding()
-                .border(.red)
                 .foregroundColor(.gray)
         
         }
@@ -41,6 +40,6 @@ struct List: View {
 }
 
 #Preview {
-    List(icon: Image(.blood), aid: "bleeding", rightCorner: Image(systemName: "chevron.right")
+    ListView(icon: Image(.blood), aid: "bleeding", rightCorner: Image(systemName: "chevron.right")
          )
 }

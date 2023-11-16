@@ -134,7 +134,21 @@ struct ContentView: View {
                     Spacer()
                 }
               
+                VStack {
                     
+                    Group {
+                        List {
+                            ListView(icon: Image(.nut), aid: "Allergies / anaphylaxis", rightCorner: Image(systemName: "chevron.right"))
+                            
+                            ListView(icon: Image(.blood), aid: "Applying a Tourniquet", rightCorner: Image(systemName: "chevron.right"))
+                            
+                            ListView(icon: Image(.asthma), aid: "Asthma attack", rightCorner: Image(systemName: "chevron.right"))
+                            
+                            ListView(icon: Image(.blood), aid: "Bleeding", rightCorner: Image(systemName: "chevron.right"))
+                            
+                        }
+                    }
+                }
                     
                 
                 
@@ -151,6 +165,46 @@ struct ContentView: View {
 
 
 #Preview {
-    ContentView()
-    
+    TabView(selection: .constant(1)){
+        
+        ContentView()
+            .tabItem {
+                Image(systemName: "text.book.closed.fill")
+                Text("Learn")
+            }
+            .tag(1)
+        
+        Text("Prepare")
+            .tabItem {
+                Image(systemName: "checkmark")
+                Text("Prepare")
+            }
+            .tag(2)
+        
+        Text("Emergency")
+            .tabItem {
+                Image(systemName: "exclamationmark.triangle.fill")
+                Text("Emergency")
+            }
+            .tag(3)
+        
+        Text("Tests")
+            .tabItem {
+                Image(systemName: "questionmark.circle")
+                Text("Tests")
+            }
+            .tag(4)
+        
+        Text("More")
+            .tabItem {
+                Image(systemName: "ellipsis")
+                Text("More")
+            }
+            .tag(5)
+        
+        
+        ContentView()
+        
+    }
+    .accentColor(.red)
 }
