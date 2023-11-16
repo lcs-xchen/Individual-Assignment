@@ -32,7 +32,7 @@ struct ContentView: View {
                                 Image(systemName: "gearshape")
                                     .foregroundColor(.white)
                                     .font(Font.system(size: 30))
-                                    .padding()
+                                    .padding(.leading, 35)
                                 Spacer()
                                 
                             }
@@ -49,7 +49,7 @@ struct ContentView: View {
                             .padding(.bottom, 50)
                             
                         
-                        Spacer(minLength: 170)
+                        Spacer(minLength: 205)
                         
                     }
                     
@@ -58,20 +58,21 @@ struct ContentView: View {
                 
                 
                     
-                Spacer()
+            
                 
                 //
                 VStack(spacing: 0) {
-                    VStack(spacing: 0) {
+                    VStack(spacing: -30) {
                         Image("cprimage")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 360)
+                            .frame(width: 350, height: 200)
+                            
                         
                         ZStack {
                             
                             Color.white
-                                .frame(height: 50)
+                                .frame(width: 350, height: 50)
                                 
                             
                             HStack {
@@ -85,6 +86,8 @@ struct ContentView: View {
                             
                         }
                         
+                        
+                
                     }
                     .cornerRadius(20)
                     .padding()
@@ -125,13 +128,17 @@ struct ContentView: View {
                 
                 HStack {
                     
-                   Text("")
-                        .padding(30)
+                 
+                       
                     
                     Text("LEARN FIRST AID FOR...")
                         .foregroundColor(.gray)
+                        .padding(.leading, -170)
+                       
+                      
+                        
                     
-                    Spacer()
+                    
                 }
               
                 VStack {
@@ -145,6 +152,8 @@ struct ContentView: View {
                             ListView(icon: Image(.asthma), aid: "Asthma attack", rightCorner: Image(systemName: "chevron.right"))
                             
                             ListView(icon: Image(.blood), aid: "Bleeding", rightCorner: Image(systemName: "chevron.right"))
+                            
+                            ListView(icon: Image(.bone), aid: "Broken bone", rightCorner: Image(systemName: "chevron.right"))
                             
                         }
                     }
